@@ -5,6 +5,8 @@
  */
 
 define(function(require, exports, module){
+    //var swiperCss = require('../../css/swiper.min.css');
+    //var mainCss = require('../../css/main.css');
     var listener = require('../static/listener.js');
     var scrollImg = require('../static/scrollImg.js');
 

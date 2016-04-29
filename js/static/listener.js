@@ -9,12 +9,14 @@ define(function(require, exports, module){
 
     module.exports = {
         sca_img : function() {
-            $('.scas').on('click', function() {
-                if($(this).hasClass('sca')) {
-                    $(this).removeClass('sca');
-                } else {
+            $('.scas').on('mouseover', function() {
+                //if($(this).hasClass('sca')) {
+                    //$(this).removeClass('sca');
+                //} else {
                     $(this).addClass('sca');
-                }
+                //}
+            }).on('mouseout', function() {
+                $(this).removeClass('sca');
             });
         }
     };

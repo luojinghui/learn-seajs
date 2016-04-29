@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "Sentio";
+    src: url("fonts2/icomoon.eot");
+    src: url("fonts2/icomoon.eot") format("embedded-opentype"), url("fonts2/font-icon.woff") format("woff"), url("fonts2/icomoon.ttf") format("truetype"), url("fonts2/icomoon.svg?9sz7c4#sentio") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+.font-icon, .widget_categories ul li:before, .widget_pages ul li:before, .widget_nav_menu ul li:before, [data-icon], .search-submit {
+    display: inline-block;
+    font-family: "Sentio";
+    font-size: inherit;
+    line-height: inherit;
+    text-rendering: auto;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: bottom;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.hero-message > i {
+    font-size: 3em;
+    opacity: 0;
+    -webkit-animation: fadeInDownBig 0.5s forwards;
+    -o-animation: fadeInDownBig 0.5s forwards;
+    animation: fadeInDownBig 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.hero-message * {
+    color: #ffffff !important;
+}
+.font-icon, .widget_categories ul li:before, .widget_pages ul li:before, .widget_nav_menu ul li:before, [data-icon], .search-submit {
+    display: inline-block;
+    font-family: "Sentio";
+    font-size: inherit;
+    line-height: inherit;
+    text-rendering: auto;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: bottom;
+}
+
+[data-icon]:before, .search-submit:before {
+    content: attr(data-icon);
+}
+
+.hero-message {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    left: 50%;
+    display: table;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    overflow: hidden;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.hero-message {
+    font-family: Sentio;
+    position: absolute;
+    background-image: linear-gradient(92deg, #f35626, #feab3a);
+    top: 338px;
+    z-index: 99;
+    left: 50%;
+    display: table;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    overflow: hidden;
+    padding-top: 25px;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 25px;
+    margin-bottom: 12.5px;
+}
+.hero-message > i {
+    font-size: 3em;
+    opacity: 0;
+    -webkit-animation: fadeInDownBig 0.5s forwards;
+    -o-animation: fadeInDownBig 0.5s forwards;
+    animation: fadeInDownBig 0.5s forwards;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.hero-message h1 {
+    font-size: 4em;
+    padding: 0 25px;
+    position: relative;
+}
+.hero-message h1 span {
+    opacity: 0;
+    -webkit-animation: fadeIn 1s forwards;
+    -o-animation: fadeIn 1s forwards;
+    animation: fadeIn 1s forwards;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.hero-message h1:after, .hero-message h1:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+}
+.hero-message h1:before {
+    top: 0;
+    left: 0;
+    -webkit-animation: bounceInLeft 2s;
+    -o-animation: bounceInLeft 2s;
+    animation: bounceInLeft 2s;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.hero-message h1:after {
+    right: 0;
+    bottom: 0;
+    -webkit-animation: bounceInRight 2s;
+    -o-animation: bounceInRight 2s;
+    animation: bounceInRight 2s;
+    -webkit-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.hero-message h2 {
+    opacity: 0;
+    -webkit-animation: fadeInUpBig 1s forwards;
+    -o-animation: fadeInUpBig 1s forwards;
+    animation: fadeInUpBig 1s forwards;
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.hero-message .icon-direction {
+    font-size: 6em;
+    line-height: 31px;
+}
+
+.meta-title {
+    padding: 50px;
+}
+
+
+
+.will-change-parent:hover .will-change {
+    will-change: transform;
+}
+.will-change {
+    height: 40px;
+    width: 200px;
+    background: #ccc;
+    transition: transform 0.5s;
+}
+.will-change:hover {
+    transform: scale(1.2);
+}
+
+.inline {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+
+
+.post-thumb {
+    overflow: hidden;
+    text-align: center;
+    height: 200px;
+}
+.post-thumb a {
+    position: relative;
+    display: inline-block;
+}
+.post-thumb a:before, .post-thumb a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12.5px;
+    top: 0;
+    bottom: 0;
+    background: #fff;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    z-index: 9;
+    will-change: transform;
+}
+.post-thumb a:before {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.post-thumb a:after {
+    right: 0;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.post-thumb a img {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    will-change: transform;
+    background: red;
+}
+.post-thumb a:hover img {
+    -webkit-transform: translateY(12.5px);
+    -ms-transform: translateY(12.5px);
+    -o-transform: translateY(12.5px);
+    transform: translateY(12.5px);
+}
+.post-thumb a:hover:before, .post-thumb a:hover:after {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+}

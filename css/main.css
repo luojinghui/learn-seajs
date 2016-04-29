@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?brkkyo');
+    src:    url('fonts/icomoon.eot?brkkyo#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?brkkyo') format('truetype'),
+    url('fonts/icomoon.woff?brkkyo') format('woff'),
+    url('fonts/icomoon.svg?brkkyo#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*[data-icon]:before {*/
+    /*font-family: 'icomoon';*/
+    /*content: attr(data-icon);*/
+    /*speak: none;*/
+    /*font-weight: normal;*/
+    /*font-variant: normal;*/
+    /*text-transform: none;*/
+    /*line-height: 1;*/
+    /*-webkit-font-smoothing: antialiased;*/
+/*}*/
+.font-box *{
+    font-family: "icomoon"!important;
+}
+
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-headphones:before {
+    content: "\1f48a";
+}
+.icon-music:before {
+    content: "\1f343";
+}
+.icon-connection:before {
+    content: "\1f377";
+}
+.icon-mic:before {
+    content: "\1f31e";
+}
+.icon-bubbles2:before {
+    content: "\1f304";
+}
+.icon-spinner:before {
+    content: "\1f554";
+}
+.icon-spinner6:before {
+    content: "\1f43a";
+}
+
+.icon-location:before {
+    content: "\e9e4";
+}
+i {
+    outline: none;
+    font-style: normal!important;
+}
+
+* {margin: 0; padding: 0;}
+body {background: #fff}
+.box {height: 596px; width: 894px; margin: 20px auto;}
+img {width: 100%;height: 600px;}
+.sca-box { height: 50px; text-align: center;}
+.scas {display: inline-block; transition: transform 0.5s ease;will-change: transform;}
+.scas img{height: 50px; width: 50px; margin-right: 30px;}
+.sca { transform: scale(1.5);-webkit-transform: scale(1.5);}
+
+/* 为不同语言指定引号的表现 */
+:lang(en) > p {quotes:'"' '"';}
+:lang(no) > p {quotes:"«" "»";}
+:lang(ch) > p {quotes:"“" "”";}
+
+/* 在q标签的前后插入引号 */
+p:before {content:open-quote;}
+p:after  {content:close-quote;}
+
+
+.text-white i {margin-left: 20px; font-size: 20px;}
+
+.fade {
+    height: 80px;
+    overflow: hidden;
+}
+h2 {
+    opacity: 0;
+    -webkit-animation: fadeInUpBig 1s forwards;
+    -o-animation: fadeInUpBig 1s forwards;
+    animation: fadeInUpBig 1s forwards;
+    -webkit-animation-delay: .5s;
+    -o-animation-delay: .5s;
+    animation-delay: .5s;
+}
+@-webkit-keyframes fadeInUpBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 80px, 0);
+        transform: translate3d(0, 80px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
