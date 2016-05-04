@@ -1,3 +1,7 @@
+body {
+    font: 16px / 1.5 "Hiragino Sans GB","Microsoft Yahei","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+}
+
 @font-face {
     font-family: 'icomoon';
     src:    url('fonts/icomoon.eot?brkkyo');
@@ -38,7 +42,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+.font-big {
+    font-size: 6em !important;
+}
 .icon-headphones:before {
     content: "\1f48a";
 }
@@ -73,10 +79,37 @@ i {
 body {background: #fff}
 .box {height: 596px; width: 894px; margin: 20px auto;}
 img {width: 100%;height: 600px;}
-.sca-box { height: 50px; text-align: center;}
-.scas {display: inline-block; transition: transform 0.5s ease;will-change: transform;}
-.scas img{height: 50px; width: 50px; margin-right: 30px;}
-.sca { transform: scale(1.5);-webkit-transform: scale(1.5);}
+.sca-box {
+    height: 50px;
+    text-align: center;
+    padding-left: 100px;
+    overflow: hidden;
+}
+.scas {
+    display: inline-block;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+.scas img{
+    height: 50px;
+    width: 50px;
+    margin-right: 30px;
+    box-shadow: 0px 14px 32px -6px #888;
+}
+.sca {
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
+
+.sca-box:hover .scas {
+    will-change: transform;
+}
+.scas:hover.scas {
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+}
 
 /* 为不同语言指定引号的表现 */
 :lang(en) > p {quotes:'"' '"';}
@@ -97,10 +130,8 @@ p:after  {content:close-quote;}
 h2 {
     opacity: 0;
     -webkit-animation: fadeInUpBig 1s forwards;
-    -o-animation: fadeInUpBig 1s forwards;
     animation: fadeInUpBig 1s forwards;
     -webkit-animation-delay: .5s;
-    -o-animation-delay: .5s;
     animation-delay: .5s;
 }
 @-webkit-keyframes fadeInUpBig {
@@ -115,3 +146,317 @@ h2 {
         transform: none;
     }
 }
+
+
+/*由两边向中间扩散：*/
+.rotate {
+    height: 80px;
+    overflow: hidden;
+    text-align: center;
+}
+.rotate a {
+    position: relative;
+    display: inline-block;
+}
+.rotate a img {
+    width: 150px;
+    height: 80px;
+    background: #fff;
+    will-change: transform;
+    -webkit-transtion: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.rotate a:before, .rotate a:after{
+    content: "";
+    width: 10px;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9;
+    -webkit-transtion: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    will-change: transform;
+}
+.rotate a:before {
+    left: 0;
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+}
+.rotate a:after {
+    right: 0;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%);
+}
+.rotate a:hover img {
+    -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+            transform: translateY(10px);
+}
+.rotate a:hover:before , .rotate a:hover:after {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+}
+
+/*由中间向两边扩散开来：*/
+/*.rotate {*/
+    /*height: 80px;*/
+    /*overflow: hidden;*/
+    /*text-align: center;*/
+/*}*/
+/*.rotate a {*/
+    /*position: relative;*/
+    /*display: inline-block;*/
+/*}*/
+/*.rotate a:before, .rotate a:after{*/
+    /*content: "";*/
+    /*width: 10px;*/
+    /*position: absolute;*/
+    /*display: block;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*background-color: #fff;*/
+    /*z-index: 9;*/
+    /*-webkit-transtion: all 0.3s ease;*/
+    /*-ms-transition: all 0.3s ease;*/
+    /*transition: all 0.3s ease;*/
+    /*will-change: transform;*/
+/*}*/
+/*.rotate a:before {*/
+    /*left: 0;*/
+    /*-webkit-transform: translateX(0%);*/
+    /*-ms-transform: translateX(0%);*/
+    /*transform: translateX(0%);*/
+/*}*/
+/*.rotate a:after {*/
+    /*right: 0;*/
+    /*-webkit-transform: translateX(0%);*/
+    /*-ms-transform: translateX(0%);*/
+    /*transform: translateX(0%);*/
+/*}*/
+/*.rotate a img {*/
+    /*width: 150px;*/
+    /*height: 80px;*/
+    /*background: #fff;*/
+    /*will-change: transform;*/
+    /*-webkit-transtion: all 0.3s ease;*/
+    /*-ms-transition: all 0.3s ease;*/
+    /*transition: all 0.3s ease;*/
+/*}*/
+/*.rotate a:hover img {*/
+    /*-webkit-transform: translateY(10px);*/
+    /*-ms-transform: translateY(10px);*/
+    /*transform: translateY(10px);*/
+/*}*/
+/*.rotate a:hover:before {*/
+    /*-webkit-transform: translateX(-100%);*/
+    /*-ms-transform: translateX(-100%);*/
+    /*transform: translateX(-100%);*/
+/*}*/
+/*.rotate a:hover:after {*/
+    /*-webkit-transform: translateX(100%);*/
+    /*-ms-transform: translateX(100%);*/
+    /*transform: translateX(100%);*/
+/*}*/
+
+
+
+.lp-proCard {
+    border: 1px solid #d4d4d4;
+    width: 740px;
+}
+.clr {
+    zoom: 1;
+}
+.clr:after {
+    clear: both;
+    content: '\0020';
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+::selection {
+    background: #fe917b;
+    color: #fff;
+}
+.lph-article-comView a {
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.lph-article-comView a {
+    color: #ED5565;
+    text-decoration: none;
+}
+.lp-proCard a {
+    height: 200px;
+}
+.lp-proCard a {
+    display: block;
+    position: relative;
+    color: #dd6e4c;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+}
+.lp-proCard .before-line1 {
+    left: 370px;
+    top: -1px;
+}
+.lp-proCard .line {
+    z-index: 2;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #FF7C54;
+    transition-timing-function: linear;
+    -webikt-transition-timing-function: linear;
+    transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+.lp-proCard .before-line2 {
+    left: -1px;
+    top: 0px;
+    display: none;
+}
+.lp-proCard .before-line3 {
+    left: -1px;
+    top: 200px;
+    display: none;
+}
+.lp-proCard .after-line1 {
+    left: 369px;
+    top: 200px;
+}
+.lp-proCard .after-line2 {
+    right: -1px;
+    top: 200px;
+    display: none;
+}
+.lp-proCard .after-line3 {
+    right: -1px;
+    top: -1px;
+    display: none;
+}
+
+
+.liear-box:after {
+    clear: both;
+    content: '\0020';
+    display: block;
+    visibility: hidden;
+    height: 0;
+}
+
+.liear-box {
+    width: 602px;
+    height: 151px;
+    border: 1px solid #D4D4D4;
+    position: relative;
+    margin: 50px 0px 50px 100px;
+}
+.liear-box a {
+    width: 600px;
+    height: 150px;
+    display: block;
+}
+.liear-box .li {
+    z-index: 2;
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #FF7C54;
+}
+.liear-box .one {
+    top: -1px;
+    right: 300px;
+    /*width: 301px;*/
+}
+.liear-box .two {
+    top: -1px;
+    left: -1px;
+    /*height: 152px;*/
+}
+.liear-box .three {
+    left: 0;
+    /*width: 300px;*/
+    bottom: -1px;
+}
+.liear-box .four {
+    left: 300px;
+    /*width: 301px;*/
+    bottom: -1px;
+}
+.liear-box .five {
+    bottom: 0;
+    right: -1px;
+    /*height: 151px;*/
+}
+.liear-box .six {
+    top: -1px;
+    right: 0;
+    /*width: 300px;*/
+}
+/*.liear-box a:hover .one{*/
+/*animation: one 0.3s linear forwards;*/
+/*}*/
+/*.liear-box a:hover .two{*/
+/*animation: two 0.2s linear forwards;*/
+/*animation-delay: 0.3s;*/
+/*}*/
+/*.liear-box a:hover .three{*/
+/*animation: three 0.3s linear forwards;*/
+/*animation-delay: .5s;*/
+/*}*/
+/*.liear-box a:hover .four{*/
+/*animation: four 0.3s linear forwards;*/
+/*}*/
+/*.liear-box a:hover .five{*/
+/*animation: five 0.2s linear forwards;*/
+/*animation-delay: 0.3s;*/
+/*}*/
+/*.liear-box a:hover .six{*/
+/*animation: six 0.3s linear forwards;*/
+/*animation-delay: .5s;*/
+/*}*/
+/*@keyframes one {*/
+/*from {width: 0px;}*/
+/*to {width: 301px;}*/
+/*}*/
+/*@keyframes two {*/
+/*from {height: 0px; width: 2px;}*/
+/*to {height: 151px; width: 2px;}*/
+/*}*/
+/*@keyframes three {*/
+/*from {width: 0px;}*/
+/*to {width: 300px;}*/
+/*}*/
+/*@keyframes four {*/
+/*from {width: 0px;}*/
+/*to {width: 301px;}*/
+/*}*/
+/*@keyframes five {*/
+/*from {height: 0px; width: 2px;}*/
+/*to {height: 151px; width: 2px;}*/
+/*}*/
+/*@keyframes six {*/
+/*from {width: 0px;}*/
+/*to {width: 300px;}*/
+/*}*/

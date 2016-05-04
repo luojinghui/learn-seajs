@@ -10,7 +10,12 @@ define(function(require, exports, module){
     var listener = require('../static/listener.js');
     var scrollImg = require('../static/scrollImg.js');
 
-    listener.sca_img();
+    //listener.sca_img();
+    listener.hover_line();
+    listener.own_hover_line();
+    //listener.own_hover_fade();
+    listener.own_hover_fadein();
+
     var mySwiper = scrollImg.my_swiper();
 
 });
