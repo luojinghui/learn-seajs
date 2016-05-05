@@ -447,6 +447,9 @@ figure img{
     opacity: 0;
     z-index: 4;
 }
+.fb-b.fadeInUp {
+    animation-delay: .3s;
+}
 .fb-b.fadeOutDown {
     animation-duration: .5s;
 }

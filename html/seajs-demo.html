@@ -7,9 +7,48 @@
     <link rel="stylesheet" href="../css/animate.css"/>
     <link rel="stylesheet" href="../css/main.css"/>
     <link rel="stylesheet" href="../css/main2.css"/>
+    <style>
+        .mask {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1050;
+            overflow: hidden;
+            outline: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            -webkit-overflow-scrolling: touch;
+        }
+        .mask-box {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            height: 300px;
+            width: 570px;
+            margin-left: -285px;
+            margin-top: -150px;
+            color: #535e66;
+            background-color: #ffffff;
+        }
+    </style>
 </head>
 <body>
+    <div class="dialog">
+        <div class="dialog-box">
+            <div class="dialog-title">
 
+            </div>
+            <div class="dialog-content">
+
+            </div>
+            <div class="dialog-footer">
+
+            </div>
+        </div>
+    </div>
 <br/><br/><br/>
 <div class="will-change-parent inline">
     <div class="will-change">

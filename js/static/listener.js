@@ -98,13 +98,15 @@ define(function(require, exports, module){
         own_hover_fadein: function() {
             $('.in-box figure').hover(function() {
                 $(this).find('.fb-b').removeClass('fadeOutDown');
-                $(this).find('.fb-b').delay(200);
+                //$(this).find('.fb-b').delay(5000);
                 $(this).find('.fb-b').addClass('fadeInUp');
             },function() {
                 $(this).find('.fb-b').clearQueue();
-                //$(this).find('.fb').clearQueue();
+                $(this).find('.fb').clearQueue();
                 $(this).find('.fb-b').removeClass('fadeInUp');
-                $(this).find('.fb-b').addClass('fadeOutDown');
+                if($(this).find('.fb-b').css('opacity') === 1) {
+                    $(this).find('.fb-b').addClass('fadeOutDown');
+                }
             });
         }
     };
